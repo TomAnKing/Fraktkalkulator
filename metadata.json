@@ -1,0 +1,5 @@
+{
+  "name": "Fraktkalkulator",
+  "description": "En applikasjon for å beregne fraktkostnader basert på lastemeter for ulike produkter og destinasjoner i Norge.",
+  "requestFramePermissions": []
+}
