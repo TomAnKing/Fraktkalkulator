@@ -26,7 +26,7 @@ const ProductRow: React.FC<ProductRowProps> = ({ row, onUpdate, onRemove, canBeR
           value={row.quantity}
           onChange={(e) => onUpdate(row.id, 'quantity', e.target.value)}
           placeholder="0"
-          className="w-full p-2 border border-slate-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 transition"
+          className="w-full p-2 border border-slate-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 transition bg-white text-slate-900"
         />
       </div>
       

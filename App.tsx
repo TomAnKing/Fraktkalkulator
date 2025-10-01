@@ -94,7 +94,7 @@ const App: React.FC = () => {
            <div className="flex justify-start pt-2">
             <button
               onClick={addRow}
-              className="px-5 py-2 bg-indigo-600 text-white font-semibold rounded-lg shadow-md hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-opacity-75 transition flex items-center gap-2"
+              className="px-5 py-2 bg-[#E16A03] text-white font-semibold rounded-lg shadow-md hover:bg-[#c85a02] focus:outline-none focus:ring-2 focus:ring-[#E16A03] focus:ring-opacity-75 transition flex items-center gap-2"
             >
               <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
                 <path fillRule="evenodd" d="M10 3a1 1 0 011 1v5h5a1 1 0 110 2h-5v5a1 1 0 11-2 0v-5H4a1 1 0 110-2h5V4a1 1 0 011-1z" clipRule="evenodd" />
