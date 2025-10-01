@@ -34,6 +34,9 @@ const Summary: React.FC<SummaryProps> = ({ rawTotal, roundedTotal, cost }) => {
         <p className="mt-2 text-right text-sm text-slate-600 italic">
           *Dette er en ca. utregning basert på varekategorier. Den faktiske fraktkostnaden kan endre seg ved bestilling.
         </p>
+        <p className="mt-2 text-right text-sm text-slate-600 italic">
+          *Påslag uten lasterampe: 2500 (pr. levering)
+        </p>
       </div>
     </div>
   );
