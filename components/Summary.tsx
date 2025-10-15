@@ -2,14 +2,14 @@ import React from 'react';
 
 interface SummaryProps {
   rawTotal: number;
-  roundedTotal: number;
+  billableTotal: number;
   cost: number;
   surcharge: number;
   hasLoadingRamp: boolean;
   subtotal: number;
 }
 
-const Summary: React.FC<SummaryProps> = ({ rawTotal, roundedTotal, cost, surcharge, hasLoadingRamp, subtotal }) => {
+const Summary: React.FC<SummaryProps> = ({ rawTotal, billableTotal, cost, surcharge, hasLoadingRamp, subtotal }) => {
   return (
     <div className="bg-[#E16A03]/20 p-6 rounded-xl border-2 border-[#E16A03]/40 space-y-4">
       <h2 className="text-xl font-bold text-slate-800">Oppsummering</h2>
@@ -18,8 +18,8 @@ const Summary: React.FC<SummaryProps> = ({ rawTotal, roundedTotal, cost, surchar
         <span className="font-semibold text-lg">{rawTotal.toFixed(2)}</span>
       </div>
       <div className="flex justify-between items-center text-slate-700">
-        <span>Total lastemeter (etter avrunding):</span>
-        <span className="font-semibold text-lg">{roundedTotal}</span>
+        <span>Fakturerbare lastemeter:</span>
+        <span className="font-semibold text-lg">{billableTotal.toFixed(2)}</span>
       </div>
        <div className="flex justify-between items-center text-slate-700">
         <span>Lasterampe tilgjengelig:</span>

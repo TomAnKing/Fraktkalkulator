@@ -30,22 +30,26 @@ const App: React.FC = () => {
   };
 
 
-  const { rawTotalLoadingMeters, roundedTotalLoadingMeters, totalCost, loadingRampSurcharge, subtotal } = useMemo(() => {
+  const { rawTotalLoadingMeters, billableLoadingMeters, totalCost, loadingRampSurcharge, subtotal } = useMemo(() => {
     const rawTotal = rows.reduce((acc, row) => {
       const quantity = parseFloat(row.quantity) || 0;
       const categoryValue = PRODUCT_CATEGORIES[row.category] || 0;
       return acc + quantity * categoryValue;
     }, 0);
 
-    const roundedTotal = Math.ceil(rawTotal);
-    const baseCost = roundedTotal * (DESTINATIONS[destination] || 0);
+    let billableTotal = rawTotal;
+    if (rawTotal > 0 && rawTotal < 1) {
+      billableTotal = 1;
+    }
+
+    const baseCost = billableTotal * (DESTINATIONS[destination] || 0);
     
     const surcharge = hasLoadingRamp ? 0 : 2500;
     const finalCost = baseCost + surcharge;
 
     return {
       rawTotalLoadingMeters: rawTotal,
-      roundedTotalLoadingMeters: roundedTotal,
+      billableLoadingMeters: billableTotal,
       totalCost: finalCost,
       loadingRampSurcharge: surcharge,
       subtotal: baseCost,
@@ -125,8 +129,8 @@ const App: React.FC = () => {
     doc.text(`${rawTotalLoadingMeters.toFixed(2)}`, 190, currentY, { align: 'right' });
     currentY += 7;
 
-    doc.text(`Total lastemeter (etter avrunding):`, 20, currentY);
-    doc.text(`${roundedTotalLoadingMeters}`, 190, currentY, { align: 'right' });
+    doc.text(`Fakturerbare lastemeter:`, 20, currentY);
+    doc.text(`${billableLoadingMeters.toFixed(2)}`, 190, currentY, { align: 'right' });
     currentY += 7;
 
     doc.text(`Lasterampe tilgjengelig:`, 20, currentY);
@@ -257,7 +261,7 @@ const App: React.FC = () => {
         {/* Summary */}
         <Summary 
           rawTotal={rawTotalLoadingMeters}
-          roundedTotal={roundedTotalLoadingMeters}
+          billableTotal={billableLoadingMeters}
           cost={totalCost}
           surcharge={loadingRampSurcharge}
           hasLoadingRamp={hasLoadingRamp}
