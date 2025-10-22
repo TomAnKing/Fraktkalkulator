@@ -5,7 +5,7 @@ export const DESTINATIONS: Record<string, number> = {
   'Bergen': 2500,
   'Ålesund': 2500,
   'Trondheim': 2500,
-  'Oslo': 1500,
+  'Oslo': 550,
   'Gjøvik': 1500,
   'Drammen': 1500,
   'Arendal': 1500,
