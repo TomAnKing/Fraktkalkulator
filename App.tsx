@@ -44,7 +44,7 @@ const App: React.FC = () => {
 
     const baseCost = billableTotal * (DESTINATIONS[destination] || 0);
     
-    const surcharge = hasLoadingRamp ? 0 : 2500;
+    const surcharge = hasLoadingRamp ? 0 : 2625;
     const finalCost = baseCost + surcharge;
 
     return {
