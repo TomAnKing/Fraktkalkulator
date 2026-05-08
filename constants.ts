@@ -35,7 +35,7 @@ export const PRODUCT_CATEGORIES: Record<string, number> = {
   'Miljøstasjon': 0.10,
   'Arkiv/stålhyller': 0.10,
   'Tepper': 0.10,
-  'Puter, pledd': 0.60,
+  'Puter, pledd': 0.10,
   'Resepsjon': 0.80,
   'Garderobeinnredning': 0.20,
   'Garderobeskap tre': 0.20,
