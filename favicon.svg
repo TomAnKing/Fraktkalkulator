@@ -1,4 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
   <rect width="32" height="32" rx="6" fill="#3D5229" />
-  <text x="50%" y="55%" dominant-baseline="middle" text-anchor="middle" font-family="Arial, sans-serif" font-weight="900" font-size="16" fill="#FFFFFF">R3</text>
+  <g transform="translate(16, 16) scale(0.9)">
+    <text x="-9" y="5" font-family="Arial, sans-serif" font-weight="900" font-size="14" fill="#FFFFFF">R</text>
+    <text x="9" y="5" font-family="Arial, sans-serif" font-weight="900" font-size="14" fill="#FFFFFF" transform="scale(-1, 1)">E</text>
+  </g>
 </svg>
