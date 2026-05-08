@@ -22,7 +22,7 @@ export const PRODUCT_CATEGORIES: Record<string, number> = {
   'Bordlampe': 0.2,
   'Gulvlampe': 0.5,
   'Taklampe': 0.5,
-  'Arbeidsbord': 0.5,
+  'Arbeidsbord': 0.1,
   'Elev/barnehagebord': 0.5,
   'Loungebord': 1,
   'Møte/kantinebord': 1,
