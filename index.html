@@ -1,61 +1,34 @@
-
-export const DESTINATIONS: Record<string, number> = {
-  'Stavanger': 2625,
-  'Haugesund': 2625,
-  'Bergen': 2625,
-  'Ålesund': 2625,
-  'Trondheim': 2625,
-  'Oslo': 1575,
-  'Gjøvik': 1575,
-  'Drammen': 1575,
-  'Arendal': 1575,
-  'Kristiansand': 1575,
-  'Bodø': 5250,
-  'Tromsø': 5250
-};
-
-export const PRODUCT_CATEGORIES: Record<string, number> = {
-  'Velg kategori...': 0,
-  'Gulv/bordskjerm': 0.5,
-  'Lydabsorbent vegg/tak': 0.5,
-  'Pod': 2,
-  'Bordlampe': 0.2,
-  'Gulvlampe': 0.5,
-  'Taklampe': 0.5,
-  'Arbeidsbord': 0.5,
-  'Elev/barnehagebord': 0.5,
-  'Loungebord': 1,
-  'Møte/kantinebord': 1,
-  'Understell': 0.5,
-  'Auditorium': 1,
-  'Kjøkken': 1,
-  'Låsesystem': 1,
-  'Resepsjon': 1,
-  'Spesialinnredning': 1,
-  'Garderobeinnredning': 2,
-  'Garderobeskap stål': 1,
-  'Garderobeskap tre': 1,
-  'Arkiv/stålhyller': 1,
-  'Miljøstasjon': 1,
-  'Skap/hylle': 1,
-  'Elev/barnehagestol': 0.5,
-  'Kontorstol': 0.5,
-  'Sittegruppe': 1,
-  'Stol': 0.5,
-  'Gardiner m/tilbehør': 0.5,
-  'Møbelstoff': 0.2,
-  'Puter, pledd': 0.2,
-  'Solskjerming': 0.5,
-  'Tepper': 0.2,
-  'Dekorativt tilbehør': 1,
-  'Elektronikk, lyd, bilde': 0.5,
-  'Ergonomi': 0.5,
-  'Kabelhåndtering': 0.2,
-  'Planter': 0.5,
-  'Profileringsartikler': 1,
-  'Seng og madrass': 1,
-  'Skilt og merking': 1,
-  'Smittevern': 0.5,
-  'Tavler': 0.5,
-  'Treningsutstyr': 1
-};
+<!DOCTYPE html>
+<html lang="no">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fraktkalkulator</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* 
+      Use a more specific selector and !important to ensure the accent-color 
+      overrides default browser styles for radio buttons.
+    */
+    input[type="radio"]:checked {
+      accent-color: #E16A03 !important;
+    }
+  </style>
+<script type="importmap">
+{
+  "imports": {
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.1.1/",
+    "react/": "https://aistudiocdn.com/react@^19.1.1/",
+    "react": "https://aistudiocdn.com/react@^19.1.1",
+    "jspdf": "https://esm.sh/jspdf@2.5.1",
+    "jspdf-autotable": "https://esm.sh/jspdf-autotable@3.8.2"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+<body class="bg-slate-50">
+  <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>

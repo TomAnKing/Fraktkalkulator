@@ -7,9 +7,20 @@ interface SummaryProps {
   surcharge: number;
   hasLoadingRamp: boolean;
   subtotal: number;
+  isUsingPallets?: boolean;
+  palletCount?: number;
 }
 
-const Summary: React.FC<SummaryProps> = ({ rawTotal, billableTotal, cost, surcharge, hasLoadingRamp, subtotal }) => {
+const Summary: React.FC<SummaryProps> = ({ 
+  rawTotal, 
+  billableTotal, 
+  cost, 
+  surcharge, 
+  hasLoadingRamp, 
+  subtotal,
+  isUsingPallets,
+  palletCount
+}) => {
   return (
     <div className="bg-[#E16A03]/20 p-6 rounded-xl border-2 border-[#E16A03]/40 space-y-4">
       <h2 className="text-xl font-bold text-slate-800">Oppsummering</h2>
@@ -18,8 +29,17 @@ const Summary: React.FC<SummaryProps> = ({ rawTotal, billableTotal, cost, surcha
         <span className="font-semibold text-lg">{rawTotal.toFixed(2)}</span>
       </div>
       <div className="flex justify-between items-center text-slate-700">
-        <span>Fakturerbare lastemeter:</span>
-        <span className="font-semibold text-lg">{billableTotal.toFixed(2)}</span>
+        {isUsingPallets ? (
+          <>
+            <span>Fakturerbare paller:</span>
+            <span className="font-semibold text-lg">{palletCount}</span>
+          </>
+        ) : (
+          <>
+            <span>Fakturerbare lastemeter:</span>
+            <span className="font-semibold text-lg">{billableTotal.toFixed(2)}</span>
+          </>
+        )}
       </div>
        <div className="flex justify-between items-center text-slate-700">
         <span>Lasterampe tilgjengelig:</span>
