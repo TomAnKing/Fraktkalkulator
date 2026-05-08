@@ -1,6 +1,6 @@
 {
-  "name": "Fraktkalkulator",
-  "description": "En applikasjon for å beregne fraktkostnader basert på lastemeter for ulike produkter og destinasjoner i Norge.",
+  "name": "RE - Fraktkalkulator",
+  "description": "Beregner fraktpris fra Stokke til ditt kontor basert på lastemeter og paller.",
   "requestFramePermissions": [],
   "majorCapabilities": []
 }
