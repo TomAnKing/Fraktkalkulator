@@ -208,6 +208,7 @@ const App: React.FC = () => {
         <div className="text-center">
             <h1 className="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">RE - Fraktkalkulator</h1>
             <p className="mt-2 text-slate-500">Beregn fraktpris fra Stokke til ditt kontor basert på lastemeter.</p>
+          <p className="mt-2 text-slate-500">Fraktkalkulator beregner ikke ut ifra volum og tar derfor ikke hensyn til at varer kan stables på pallene. Dersom det skal sendes større volum av varer som kan stables kan en halvere den estimerte fraktkostnaden.</p>
         </div>
 
         {/* Destination & Loading Ramp */}
