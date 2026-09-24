@@ -1,17 +1,17 @@
 
 export const DESTINATIONS: Record<string, number> = {
-  'Stavanger': 2625,
-  'Haugesund': 2625,
-  'Bergen': 2625,
-  'Ålesund': 2625,
-  'Trondheim': 2625,
-  'Oslo': 1575,
-  'Gjøvik': 1575,
-  'Drammen': 1575,
-  'Arendal': 1575,
-  'Kristiansand': 1575,
-  'Bodø': 5250,
-  'Tromsø': 5250
+  'Stavanger': 3150,
+  'Haugesund': 3150,
+  'Bergen': 3150,
+  'Ålesund': 3150,
+  'Trondheim': 3150,
+  'Oslo': 1890,
+  'Gjøvik': 1890,
+  'Drammen': 1890,
+  'Arendal': 1890,
+  'Kristiansand': 1890,
+  'Bodø': 6300,
+  'Tromsø': 6300
 };
 
 export const PRODUCT_CATEGORIES: Record<string, number> = {
