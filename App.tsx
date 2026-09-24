@@ -63,7 +63,7 @@ const App: React.FC = () => {
       currentSubtotal = billableTotal * (DESTINATIONS[destination] || 0);
     }
     
-    const surcharge = hasLoadingRamp ? 0 : 2500;
+    const surcharge = hasLoadingRamp ? 0 : 3150;
     const finalCost = currentSubtotal + surcharge;
 
     return {
